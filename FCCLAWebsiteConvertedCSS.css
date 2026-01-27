@@ -1,0 +1,870 @@
+/* ROOT VALUES*/
+/* Can also be seen as values that are constants*/
+ :root {
+	/* ROOT CONSTANT VARIABLES*/
+	/* Official red color of FCCLA */
+	 --fccla-red: #e4002b;
+	 --fccla-red-rgb: 228, 0, 43;
+	 --intense-cherry: #bd2c43;
+	 --intense-cherry-rgb: 189, 44, 67;
+	/* Placeholder value*/
+	 --mchs-orange: orange;
+	/* Placeholder value*/
+	 --mchs-navy: navy;
+	/* Contrast basic background from traditional white */
+	 --background: #f4f4f4;
+	 --transition: all 0.3s ease;
+	/* Controls how long transitions take */
+	 --image-carousel-gap: clamp(10px, 2vw, 20px);
+	 /* How much of the edge is visible when hidden*/
+	 --nav-visible-edge: clamp(20px, 1vw, 40px);
+	/* Controls the gap between the carousel's images*/
+	/* BASIC Z-INDEX HIERARCHY*/
+	 --z-overlay: 2000;
+	 --z-header: 1000;
+	 --z-sidebar: 500;
+	 --z-base: 50;
+	/* Base z-index for all elements*/
+	 --background-z-index: -1;
+	/* FALLBACK VALUES IN CASE BROWSER DOESN'T SUPPORT AN ATTRIBUTE*/
+	 --height-unit: 1vh;
+}
+/* Changes height unit to dvh, if supported, for better user experience*/
+ @supports (height: 100dvh) {
+	 :root {
+		 --height-unit: 1dvh;
+	}
+}
+/* RESET */
+ * {
+	 margin: 0;
+	/* All elements, unless specified otherwise, have no margin*/
+	 padding: 0;
+	/* All elements, unless specified otherwise, have no padding*/
+	 box-sizing: border-box;
+	/* All elements, unless specified otherwise, have the max box size of their border box*/
+	/*border: 4px double blue;*/
+}
+/* Attributes that apply to the website as a whole*/
+ html {
+	 scroll-behavior: smooth;
+	/* Sets the scrolling behavior of the website to smooth*/
+}
+ body.overlay-active {
+	 overflow: hidden;
+}
+ body.overlay-active main, body.overlay-active header, body.overlay-active nav, body.overlay-active footer {
+	transition: var(--transition);
+	pointer-events: none;
+}
+.site-overlay {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100dvw;
+	min-height: calc(100 * var(--height-unit));
+	background: rgba(0, 0, 0, 0.3);
+	backdrop-filter: blur(5px) grayscale(50%);
+	z-index: var(--z-overlay);
+	display: none;
+	pointer-events: auto;
+}
+
+body.overlay-active .site-overlay {
+	display: block;
+	pointer-events: auto;
+}
+/* UTILITY CHUNKS TO BE ABLE TO USE*/
+/***********************************/
+/* ----- Placeholder Utility Chunks -------- */
+/* Utility that makes the element a flexbox*/
+main, .data-node, footer, .image-carousel-track, .nav-link-container, #ImageCarouselContainer {
+	 display: flex;
+}
+/* Utility that creates a flexbox with a column flex direction*/
+main, .nav-link-container {
+	 flex-direction: column;
+}
+/* Utility that centers content within a flexbox*/
+ .data-node {
+	 align-items: center;
+	 justify-content: center;
+}
+/* Doesn't allow browsers to draw a scrollbar, but still allow scrolling*/
+ .image-carousel-track {
+	/* Hide scrollbar for Chrome, Safari and Opera*/
+	 -ms-overflow-style: none;
+	/*Internet Explorer and Edge*/
+	 scrollbar-width: none;
+	/* Firefox*/
+}
+ .image-carousel-track::-webkit-scrollbar {
+	 display: none;
+}
+
+.no-transition .image-carousel-slide {
+	/*transition: none !important;*/
+}
+/* --------- Mix-In Utility Chunks ------------ */
+/* ATTIBUTES FOR THE MAJOR HTML TAGS*/
+/************************************/
+/* CSS attributes for the BODY tag*/
+ body {
+	 min-height: calc(100 * var(--height-unit));
+	/* Sets the minimum height to 100% of the screen height*/
+	/* Sets the body to have a column flexbox format*/
+	align-items: stretch;
+	background-color: #fdfaf5;
+}
+/* CSS attributes for the HEADER tag*/
+ header {
+	 position: -webkit-sticky;
+	 position: sticky;
+	 top: 0;
+	 z-index: var(--z-header);
+	
+	background-color: var(--fccla-red);
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+	color: rgba(255, 255, 255, 1);
+	font-family: 'Zilla Slab', serif;
+	flex: display;
+}
+
+/* CSS attributes for the MAIN tag*/
+ main {
+	/* Sets the main to have a column flexbox format*/
+	 flex: 1;
+	 overflow-y: auto;
+	 scrollbar-gutter: stable;
+	 margin-left: var(--nav-visible-edge);
+	/* Fallback top margin setting*/
+	 width: calc(100% - var(--nav-visible-edge));
+}
+ footer {
+	 background: var(--fccla-red);
+	 color: white;
+	 padding: 40px 20px;
+	 width: 100%;
+	 
+	 
+	 position: relative;
+	 display: flex;
+	 flex-direction: row;
+	 justify-content: space-between;
+	 align-items: flex-start;
+	 z-index: var(--z-header);
+}
+/* CLASS CSS ATTRIBUTES*/
+/***********************/
+/* -------------- Header CLasses ----------*/
+
+.header-dropdown {
+	display: flex;
+	align-items: center;
+}
+
+.dropbtn {
+	background-color: white;
+	color: var(--fccla-red);
+	padding: 10px;
+	font-size: 1rem;
+	font-weight: bold;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: var(--transition);
+	width: 100%;
+}
+
+.dropdown-container {
+	position: relative;
+	display: inline-block;
+	width: clamp(100px, 20vw, 400px);
+}
+
+.dropdown-content {
+	display: none;
+	position: absolute;
+	left: 0;
+	width: 100%;
+	background-color: white;
+	box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+	overflow: hidden;
+	z-index: calc(var(--z-header) + 2);
+}
+
+.dropdown-content a {
+	color: black;
+	padding: 12px 16px;
+	text-decoration: none;
+	display: block;
+	font-size: 0.9rem;
+}
+
+.dropdown-content a:hover {
+	background-color: #f1f1f1;
+	color: var(--fccla-red);
+}
+
+.dropdown-container:hover .dropdown-content {
+	display: block;
+}
+
+.dropdown-container:hover .dropbtn {
+	background-color: #f4f4f4;
+}
+
+/* ------- Image Carousel Classes ----------*/
+/* The CSS for the container the holds the Image Carousel slides*/
+ .image-carousel-track {
+	 width: 100dvw;
+	 position: relative;
+	 overflow-x: auto;
+	 scroll-snap-type: none;
+	 gap: var(--image-carousel-gap);
+	 padding: 5px 15%;
+	 justify-content: flex-start;
+	 border: 3px solid black;
+}
+/* Holder for the images*/
+ .image-carousel-slide {
+	 flex: 0 0 70%;
+	 scroll-snap-align: center;
+	 transition: transform 0.4s ease;
+	 overflow: hidden;
+	 border: solid 3px;
+	 border-radius: 2vw;
+	 aspect-ratio: 1.7777777778;
+	 box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 
+                0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+/* CSS for the Image Carousel images*/
+ .carousel-img {
+	 width: 100%;
+	 height: 100%;
+	 object-fit: cover;
+	 object-position: center;
+}
+
+/* ----------- Navigation Sidebar Classes --------------*/
+.basic-sidebar {
+	/* Variables used by this element*/
+	 --sidebar-width: clamp(240px, 20vw, 300px);
+	/* Sizing and other basic attributes*/
+	 position: fixed;
+	 top: 0;
+	 width: var(--sidebar-width);
+	 height: calc(100 * var(--height-unit));
+	 background: transparent;
+	 /* Layer of the element in respect to everything else*/
+	 z-index: var(--z-sidebar);
+	/* Hidden position calculation*/
+	clip-path: inset(0 calc(var(--sidebar-width) - var(--nav-visible-edge)) 0 0);
+	transition: clip-path 0.3s ease;
+}
+
+.basic-sidebar nav {
+	 width: 100%;
+	 height: 100%;
+	 background-color: var(--intense-cherry) !important;
+	 
+	 transform: translateX(calc((var(--sidebar-width) - var(--nav-visible-edge)) * -1));
+	 transition: var(--transition), box-shadow 0.3s ease;
+}
+
+.basic-sidebar:hover,
+.basic-sidebar:focus-within {
+	clip-path: inset(0 0 0 0);
+}
+
+.basic-sidebar:hover nav,
+.basic-sidebar:focus-within nav {
+	transform: translateX(0);
+	box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.nav-link-container {
+	white-space: nowrap;
+	transition: opacity 0.2s ease;
+}
+
+.basic-sidebar:hover .nav-link-container a {
+	opacity: 1;
+}
+
+header, .basic-sidebar nav {
+	background-color: rgba(var(--fccla-red-rgb), 0.9);
+	backdrop-filter: blur(10px);
+}
+
+/* --------- About Section Classes ----------*/
+.icon {
+	width: 60px;
+	height: 60px;
+	flex-shrink: 0;
+	background-color: var(--fccla-red);
+	display: inline-block;
+	-webkit-mask-size: contain;
+	mask-size: contain;
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+	mask-position: center;
+}
+
+.icon-text {
+	display: flex;
+	flex-direction: row;
+	padding: 3px 5px;
+	align-items: center;
+	border: 5px solid var(--fccla-red);
+	border-radius: 12px;
+	margin: 5px 0;
+}
+
+.icon-text-exception {
+	flex-direction: column !important;
+}
+
+.icon-text p {
+	color: var(--intense-cherry);
+}
+
+.icon-text b {
+	color: var(--fccla-red);
+}
+
+.about-bullet-list {
+	display: flex;
+	justify-content: center;
+}
+
+.about-bullet-list li {
+	padding-bottom: 6px;
+	color: var(--intense-cherry);
+	font-size: clamp(0.9rem, 1.2vw, 1.1rem);
+}
+
+.no-border {
+	border: none !important;
+}
+
+/* --------- Calendar Classes ----------*/
+
+.calendar-header {
+	text-align: center;
+	margin-bottom: 30px;
+}
+
+.calendar-header h3 {
+	color:var(--fccla-red);
+	font-size: 2rem;
+	text-transform: uppercase;
+}
+
+.google-calendar-wrapper {
+	position: relative;
+	width: 100%;
+	max-width: 900px;
+	height: calc(100 * var(--height-unit) - 100px);
+	border: 2px solid #ddd;
+	border-radius: 12px;
+	overflow: hidden;
+	align-items: stretch;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.google-calendar-wrapper iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: calc(100 * var(--height-unit) - 100px);
+	border: none;
+}
+
+@media (max-width: 768px) {
+	.google-calendar-wrapper {
+		height: 500px;
+	}
+}
+
+
+/* --------- Recognition Card Display Classes ---------*/
+
+.recognition-track {
+	display: flex;
+	overflow-x: auto;
+	padding: 20px 0;
+	gap: 20px;
+	align-items: flex-start;
+}
+
+.recognition-card {
+	display: flex;
+	flex-shrink: 0;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 225px;
+	padding: 15px;
+	transition: background 0.3s ease;
+	cursor: default;
+}
+
+.recognition-card-img-and-name {
+	position: relative;
+	width: 100%;
+	height: auto;
+	background: white;
+	border-radius: 15px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	text-align: center;
+	overflow: hidden;
+	z-index: calc(var(--z-base) + 1);
+}
+
+.recognition-card-img-and-name img {
+	width: 100%;
+	aspect-ratio: 3/4;
+	height: auto;
+	object-fit: cover;
+	margin-bottom: 0;
+	display:block;
+}
+
+.recognition-card-name {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	margin: 0;
+	padding: 20px 10px;
+	background: linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0) 100%);
+	color: white;
+	font-weight: bold;
+	text-align: center;
+	backdrop-filter: blur(2px);
+	font-size: 1.4rem;
+}
+
+.card-details {
+	width: 100%;
+	text-align: center;
+	background: #eeeeee;
+	padding: 15px 10px;
+	margin-top: 0;
+	border-radius: 0 0 15px 15px;
+	transition: all 0.4s cubic-bezier(0.4, 0 0.2 1);
+	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.recognition-card-title {
+	width: 90%;
+	font-size: 0.85rem;
+	font-weight: 800;
+	text-transform: uppercase;
+	color: var(--fccla-red);
+	letter-spacing: 1.5px;
+	
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	line-height: 1.2;
+	min-height: 2.5em;
+	margin-top: 10px auto 0;
+	
+	border: 2px outset black;
+	padding: 2px 5px;
+}
+
+.extra-info {
+	max-height: 0;
+	opacity: 0;
+	overflow: hidden;
+	transition: max-height 0.4s ease, opacity 0.3s ease;
+	text-align: left;
+	padding: 0 10px;
+}
+
+.extra-info p {
+	font-size: 0.85rem;
+	margin: 10px 0;
+	line-height: 1.4;
+	color: #444;
+}
+
+.recognition-card:hover .recognition-card-img-and-name {
+	transform: translateY(-8px);
+	box-shadow: 0 15px 30px rgba(var(--fccla-red-rgb), 0.2);
+}
+
+.recognition-card:hover .card-details {
+	transform: translateY(-8px);
+	background: #ededed;
+	/*transform: translateY(5px);*/
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.recognition-card:hover .extra-info {
+	max-height: 300px;
+	opacity: 1;
+	padding-bottom: 15px;
+}
+
+/* --------- Circular Morphing Grid Classes ---------*/
+ .data-grid {
+	 display: flex;
+	 justify-content: center;
+	 align-items: center;
+	 gap: 30px;
+	 flex-wrap: wrap;
+	 padding: 40px 0;
+	 scroll: no;
+}
+ .data-node {
+	 --data-node-diameter: clamp(120px, 15vw, 150px);
+	 
+	 position: relative;
+	 width: var(--data-node-diameter);
+	 height: var(--data-node-diameter);
+	 border-radius: 50%;
+	 background: var(--fccla-red);
+	 cursor: pointer;
+	 z-index: var(--z-base);
+	 
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	box-shadow: 04px 10px rgba(0, 0, 0, 0.2);
+	transition: transform 0.3s ease, box-shadow 0.3 ease;
+}
+
+.data-node:hover {
+	transform: scale(1.05);
+	box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+ .data-node .node-content {
+	 opacity: 1;
+	 display: flex;
+	 flex-direction: column;
+	 align-items: center;
+	 justify-content: center;
+	 width: 100%;
+	 height: 100%;
+	 padding: 10px;
+	 color: white;
+}
+ .data-node.active {
+	 --active-node-width: clamp(300px, 80vw, 600px);
+	 
+	 position: fixed;
+	 top: 50%;
+	 left: 50%;
+	 width: var(--active-node-width);
+	 height: calc(80 * var(--height-unit));
+	 border-radius: 20px;
+	 z-index: calc(var(--z-overlay) + 1);
+	 
+	 margin-left: calc(var(--active-node-width) / -2);
+	 margin-top: calc(-40 * var(--height-unit));
+	 
+	 pointer-events: auto;
+	 cursor: default;
+	 box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5);
+}
+
+.node-content p,
+.node-content .close-node-btn {
+	display: none;
+	opacity: 0;
+}
+
+.node-content h2 {
+	font-size: 1rem;
+	margin: 0;
+	line-height: 1.2;
+	pointer-events: none;
+}
+
+ .data-node.active .node-content {
+	display: flex;
+	flex-direction: column;
+	
+	justify-content: space-between;
+	align-items: center;
+	height: 100%;
+	padding: 60px 40px;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+.data-node.active .node-content h2{
+	font-size: 2.5rem;
+	margin: 0;
+	transition: font-size 0.3s ease;
+}
+
+.data-node.active .node-content p{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-grow: 1;
+	font-size: 1.2rem;
+	line-height: 1.6;
+	margin: 20px 0;
+	max0width: 85%;
+	opacity: 1;
+	transition: opacity 0.4s ease 0.2s;
+}
+
+.data-node.active .node-content .close-node-btn{
+	display: block;
+	margin-top: 20px;
+	margin-bottom: 0;
+	opacity: 1;
+	transition: opacity 0.4s ease 0.2s;
+	pointer-evetns: auto;
+}
+
+.close-node-btn {
+	margin-top: 20px;
+	padding: 10px 20px;
+	cursor: pointer;
+	background: white;
+	color: var(--fccla-red);
+	border: none;
+	border-radius: 5px;
+	font-weight: bold;
+	z-index: calc(var(--z-overlay) + 1);
+}
+
+/* ID CSS ATTRIBUTES*/
+/********************/
+/* ---------- Header IDs -----------*/
+#HeaderLogoContainer {
+	display: flex;
+	align-items: center;
+}
+
+
+#HeaderLogo {
+    display: inline-block;
+    /* You MUST define dimensions for the mask to have 'space' to exist */
+    width: clamp(150px, 20vw, 250px); 
+    height: clamp(50px, calc(20 * var(--height-unit)), 100px);
+	margin: 20px 0;
+
+    /* Mask Properties */
+    -webkit-mask-image: url('assets/logos/FCCLATaglineLogo_red.png');
+    mask-image: url('assets/logos/FCCLATaglineLogo_red.png');
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+
+    /* This color will 'show through' the transparent parts of the PNG */
+    background-color: white; 
+}
+
+#HeaderLogoInfo {
+	color: white;
+}
+
+#HeaderLogoInfo h2 {
+	margin: 0;
+	font-size: clamp(0.85rem, 2vw, 1.8rem);
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+#HeaderLogoInfo p {
+	margin: 0;
+	font-size: clamp(0.5rem, 1.4vw, 0.85rem);
+	opacity: 0.9;
+}
+
+/* ---------- Image Carousel IDs --------------*/
+ #ImageCarouselContainer {
+	 position: relative;
+	 width: 101%;
+	 min-height: fit-content;
+	 overflow: visible;
+	 display: flex;
+	 flex-direction: column;
+	 justify-content:  center;
+	 align-items: center;
+	 background-color: rgba(200, 200, 200, 0.8);
+}
+
+#ImageCarouselHeaderContainer {
+	padding: 5px 0;
+}
+
+#ImageCarouselHeaderContainer h1 {
+	padding: 5px 3px;
+	border: 5px double black;
+	border-radius: 3px;
+	justify-content: center;
+}
+
+ #nextBtn, #prevBtn {
+	 position: absolute;
+	 top: 50%;
+	 transform: translateY(-50%);
+	 z-index: calc(var(--z-base) + 1);
+	 background: rgba(255, 255, 255, 0.7);
+	 border: none;
+	 padding: 15px;
+	 cursor: pointer;
+}
+
+#nextBtn {
+	right: 0;
+}
+
+#prevBtn {
+	left: 0;
+}
+/* ----------- About IDs -----------*/
+#AboutFCCLAContainer {
+	display: flex;
+	width: 100%;
+	padding: 5px 10px;
+	flex-direction: row;
+	color: var(--fccla-red);
+	background-color: rgba(250, 250, 250, 0.7);
+}
+
+#WhatFCCLAIs {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	max-width: 60%;
+	padding: 20px 0;
+}
+
+#Mission .icon {
+	-webkit-mask-image: url('assets/icons/rocket-ship.svg');
+	mask-image: url('assets/icons/rocket-ship.svg');
+}
+
+#Focus .icon {
+	-webkit-mask-image: url('assets/icons/target.svg');
+	mask-image: url('assets/icons/target.svg');
+}
+
+#TheFuture .icon {
+	-webkit-mask-image: url('assets/icons/hour-glass.svg');
+	mask-image: url('assets/icons/hour-glass.svg');
+}
+
+#TheFuture ul {
+	list-style: none;
+	padding-left: 0;
+}
+
+#TheFuture li::before {
+	content: ">";
+	color: var(--fccla-red);
+	font-weight: bold;
+	display: inline-block;
+	width: 1em;
+	margin-left: -1em;
+}
+
+
+/* ------------ Calendar IDs -----------*/
+#FCCLACalendarContainer {
+	padding: 20px 5%;
+	background-color: #e0e0e0;
+	height: calc(100 * var(--height-unit));
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	overflow: hidden;
+}
+
+/* ---------- Footer IDs ------------*/
+#FooterLogo h3 {
+	font-family: 'Zilla Slab', serif;
+	font-size: 2rem;
+	margin: 0;
+}
+
+#ContactInfo {
+	padding: 5px 30px;
+	border-left: 5px solid white;
+}
+
+#ContactInfo h2 {
+	display: flex;
+	font-size: 1.2rem;
+	padding: 6px 8px;
+	margin-bottom: 15px;
+	text-transform: uppercase;
+	background-color: white;
+	color: var(--fccla-red);
+	border-bottom: 6px double var(--intense-cherry);
+	border-radius: 6px;
+	box-shadow: 5px 3px 2px 2px rgba(255, 255, 255, 0.7);
+}
+
+#ContactInfo h3 {
+	display: flex;
+	width: 50%;
+	padding: 3px 6px;
+	margin: 10px 0 0 0;
+	font-size: 0.9rem;
+	opacity: 0.9;
+	border-width: 3px;
+	border-style: inset;
+	border-top-color: var(--intense-cherry);
+	border-left-color: var(--intense-cherry);
+	border-bottom-color: white;
+	border-right: white;
+	border-radius: 4px;
+	color: var(--fccla-red);
+	background: rgba(255, 255, 255, 1);
+	box-shadow: 0px 1px 2px 2px rgba(255, 255, 255, 0.5),
+				1px 2px 2px 2px rgba(var(--intense-cherry-rgb), 0.4);
+}
+
+#ContactInfo p {
+	font-size: 1.1rem;
+	padding: 15px 10px;
+}
+
+
+/* SUPPORT CHECKS AND OVERRIDE OF PREVIOUS VALUES*/
+/*************************************************/
+/* Checks for the browser support of the attribute anchor-name*/
+ @supports (anchor-name: --test) {
+	/* Assigns the anchor name attribute to the header*/
+	/* Gets the height of the header to get the offset needed for the main element*/
+	 header {
+		 anchor-name: --site-header;
+	}
+	 .basic-sidebar {
+		 margin-top: anchor-size(--site-header height);
+	}
+	 main {
+		 margin-top: anchor-size(--site-header height);
+	}
+}
+ 
