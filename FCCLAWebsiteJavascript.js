@@ -271,22 +271,40 @@ function generateLeadership() {
 	leadershipData.forEach(leader => {
 		const card = document.createElement('div');
 		card.className = 'recognition-card';
-		
-		card.innerHTML = `
-			<div class="recognition-card-img-and-name">
-				<img src="assets/leadership-portraits/${leader.image}" alt="${leader.name}">
-				<h4 class="recognition-card-name">${leader.name}</h4>
-			</div>
-			<div class="card-details">
-				<div class="extra-info">
-					<p><strong>Responsibilities:</strong> ${leader.responsibilities}</p>
-					<p><strong>Career Goals:</strong> ${leader.goals}</p>
+
+		if (leader.image === "") {
+			card.innerHTML = `
+				<div class="recognition-card-img-and-name">
+					<img src="assets/leadership-portraits/${leader.image}" alt="${leader.name}">
+					<h4 class="recognition-card-name">${leader.name}</h4>
 				</div>
-				<h5 class="recognition-card-title">${leader.title}</h5>
-			</div>
-		`;
-		
-		track.appendChild(card);
+				<div class="card-details">
+					<div class="extra-info">
+						<p><strong>Responsibilities:</strong> ${leader.responsibilities}</p>
+						<p><strong>Career Goals:</strong> ${leader.goals}</p>
+					</div>
+					<h5 class="recognition-card-title">${leader.title}</h5>
+				</div>
+			`;
+			
+			track.appendChild(card);
+		} else {
+			card.innerHTML = `
+				<div class="recognition-card-img-and-name">
+					<img alt="${leader.name}">
+					<h4 class="recognition-card-name">${leader.name}</h4>
+				</div>
+				<div class="card-details">
+					<div class="extra-info">
+						<p><strong>Responsibilities:</strong> ${leader.responsibilities}</p>
+						<p><strong>Career Goals:</strong> ${leader.goals}</p>
+					</div>
+					<h5 class="recognition-card-title">${leader.title}</h5>
+				</div>
+			`;
+			
+			track.appendChild(card);
+		}
 	})
 }
 
@@ -461,4 +479,5 @@ window.addEventListener('keydown', (e) => {
 	if (e.key === "Escape") {
 		closeActiveNode();
 	}
+
 });
