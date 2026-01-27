@@ -879,6 +879,10 @@ header, .basic-sidebar nav {
 	padding: 15px 10px;
 }
 
+#PlanSummary {
+	width: 800px;
+	height: 1000px;
+}
 
 /* SUPPORT CHECKS AND OVERRIDE OF PREVIOUS VALUES*/
 /*************************************************/
@@ -897,5 +901,6 @@ header, .basic-sidebar nav {
 	}
 }
  
+
 
 
