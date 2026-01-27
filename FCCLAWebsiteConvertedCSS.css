@@ -353,6 +353,16 @@ header, .basic-sidebar nav {
 	font-size: clamp(0.9rem, 1.2vw, 1.1rem);
 }
 
+.about-bullet-list a {
+	color: var(--fccla-red);
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.about-bullet-list a:hover {
+	text-decoration: underline;
+	color: var(--intense-cherry);
+}
 .no-border {
 	border: none !important;
 }
@@ -887,4 +897,5 @@ header, .basic-sidebar nav {
 	}
 }
  
+
 
