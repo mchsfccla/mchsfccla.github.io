@@ -379,6 +379,8 @@ header, .basic-sidebar nav {
 }
 .no-border {
 	border: none !important;
+	self-align: flex-start !important;
+	padding: 0 !important
 }
 
 /* --------- Calendar Classes ----------*/
@@ -955,6 +957,7 @@ header, .basic-sidebar nav {
 	}
 }
  
+
 
 
 
