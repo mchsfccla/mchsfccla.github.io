@@ -150,17 +150,31 @@ main {
 footer {
 	 background: var(--fccla-red);
 	 color: white;
-	 padding: 40px 20px;
+	 padding: 60px 40px;
 	 width: 100%;
-	 
-	 
-	 position: relative;
 	 display: flex;
-	 flex-direction: row;
+	 flex-wrap: wrap;
 	 justify-content: space-between;
 	 align-items: flex-start;
+	 gap: 40px;
 	 z-index: var(--z-header);
 }
+
+.advisor-entry {
+	margin-bottom: 20px;
+}
+
+.legal-info {
+	margin-top: 20px;
+	font-size: 0.8rem;
+	opacity: 0.8;
+}
+
+.legal-info a {
+	color: white;
+	text-decoration: underline;
+}
+
 /* CLASS CSS ATTRIBUTES*/
 /***********************/
 /* -------------- Header CLasses ----------*/
@@ -830,15 +844,11 @@ header, .basic-sidebar nav {
 }
 
 /* ---------- Footer IDs ------------*/
-#FooterLogo h3 {
-	font-family: 'Zilla Slab', serif;
-	font-size: 2rem;
-	margin: 0;
-}
-
 #ContactInfo {
-	padding: 5px 30px;
+	flex: 1;
+	min-width: 300px;
 	border-left: 5px solid white;
+	padding: 0 30px;
 }
 
 #ContactInfo h2 {
@@ -855,11 +865,10 @@ header, .basic-sidebar nav {
 }
 
 #ContactInfo h3 {
-	display: flex;
-	width: 50%;
-	padding: 3px 6px;
-	margin: 10px 0 0 0;
-	font-size: 0.9rem;
+	display: inline-block;
+	width: auto;
+	padding: 4px 12px;
+	font-size: 1rem;
 	opacity: 0.9;
 	border-width: 3px;
 	border-style: inset;
@@ -869,14 +878,59 @@ header, .basic-sidebar nav {
 	border-right: white;
 	border-radius: 4px;
 	color: var(--fccla-red);
-	background: rgba(255, 255, 255, 1);
+	background: white;
 	box-shadow: 0px 1px 2px 2px rgba(255, 255, 255, 0.5),
 				1px 2px 2px 2px rgba(var(--intense-cherry-rgb), 0.4);
 }
 
 #ContactInfo p {
 	font-size: 1.1rem;
-	padding: 15px 10px;
+	padding: 15px 0;
+	font-family: monospace;
+}
+
+#FooterBranding {
+    flex: 1;
+	min-width: 300px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+#FooterLogo {
+	width: clamp(150px, 15vw, 200px);
+	height: 80px;
+	
+	/* Mask Properties */
+    -webkit-mask-image: url('assets/logos/FCCLAEmblemRed.png');
+    mask-image: url('assets/logos/FCCLAEmblemRed.png');
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
+	
+	background-color:white;
+	margin-bottom: 10px;
+}
+
+#FooterLogoInfo {
+	color: white;
+}
+
+#HeaderLogoInfo h2 {
+	margin: 0;
+	font-size: clamp(0.85rem, 2vw, 1.8rem);
+	text-transform: uppercase;
+	letter-spacing: 1px;
+}
+
+#FooterLogoInfo p {
+	margin: 0;
+	font-size: clamp(0.5rem, 1.4vw, 0.85rem);
+	opacity: 0.9;
 }
 
 #PlanSummary {
@@ -901,6 +955,7 @@ header, .basic-sidebar nav {
 	}
 }
  
+
 
 
 
