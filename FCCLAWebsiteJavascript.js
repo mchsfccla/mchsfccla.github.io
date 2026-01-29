@@ -256,8 +256,8 @@ const leadershipData = [
 		name: "Courtney", 
 		title: "Vice President - Social Media",
 		image: "",
-		responsibilities: "\"I help plan, recruit, answer question, and being a friend to others.\"",
-		goals: "\"A successful event planning business on the side while I pursue a full career in the medical field.\""
+		responsibilities: "\"I help plan, recruit people to FCCLA, answering questions, and being a friend to others.\"",
+		goals: "\"I one day will have a successful event planning business on the side while I pursue a full career in the medical field.\""
 	},
 ];
 
@@ -463,5 +463,6 @@ window.addEventListener('keydown', (e) => {
 	}
 
 });
+
 
 
