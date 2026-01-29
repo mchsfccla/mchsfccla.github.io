@@ -943,6 +943,7 @@ header, .basic-sidebar nav {
 #RedBlock {
 	width: clamp(30px, 25vw, 400px);
 	height: 100%;
+	min-height: 300px;
 	background: var(--fccla-red);
 }
 
@@ -964,6 +965,7 @@ header, .basic-sidebar nav {
 	}
 }
  
+
 
 
 
