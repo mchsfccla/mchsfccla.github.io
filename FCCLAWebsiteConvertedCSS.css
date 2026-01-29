@@ -940,6 +940,13 @@ header, .basic-sidebar nav {
 	height: 1000px;
 }
 
+#RedBlock {
+	width: clamp(30px, 25vw, 400px);
+	height: 100%;
+	background: var(--fccla-red);
+}
+
+
 /* SUPPORT CHECKS AND OVERRIDE OF PREVIOUS VALUES*/
 /*************************************************/
 /* Checks for the browser support of the attribute anchor-name*/
@@ -957,6 +964,7 @@ header, .basic-sidebar nav {
 	}
 }
  
+
 
 
 
