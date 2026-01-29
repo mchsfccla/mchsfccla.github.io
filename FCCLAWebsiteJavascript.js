@@ -214,22 +214,22 @@ const leadershipData = [
 		name: "Josie",
 		title: "President",
 		image: "president.jpeg",
-		responsibilities: "",
-		goals: ""
+		responsibilities: "\"I help to lead discussions & meetings. I offer a creative mindset & feed back during our discussions.\"",
+		goals: "\"My dream is to start my own special occasion and formal wear brand. I plan to intern with a fashion couture atelier (preferrably in Paris or NYC!)\""
 	},
 	{
 		name: "Talan", 
 		title: "Vice President - Membership", 
 		image: "vp-membership1.jpeg",
-		responsibilities: "",
-		goals: ""
+		responsibilities: "\"My responsibility is to recruit other students into the club, helping more sudents feel welcomed, accomplished and whole.\"",
+		goals: "\"Go to Bridgerland Technical College and get a certificate in Graphic Design and possibly get a degree. I'm set on Graphic Design as a career.\""
 	},
 	{
 		name: "Emma",
 		title: "Vice President - Membership",
 		image: "vp-membership2.jpeg",
-		responsibilities: "",
-		goals: ""
+		responsibilities: "\"To be a mentor to younger members and look after them. As a leader, you do have more responsibilities and work, but personally, I think it's worth it.\"",
+		goals: "\"My career goals are career goals are to become an interior or set designer. I love all things design- & architexture-wise!\""
 	},
 	{
 		name: "Aunara",
@@ -242,22 +242,22 @@ const leadershipData = [
 		name: "Emily",
 		title: "Vice President - Star Events",
 		image: "",
-		responsibilities: "",
-		goals: ""
+		responsibilities: "\"Leadership member over events.\"",
+		goals: "\"Elementary Teacher.\""
 	},
 	{
 		name: "Tana", 
 		title: "Vice President - Service", 
 		image: "vp-service.jpeg",
-		responsibilities: "",
-		goals: ""
+		responsibilities: "\"Assist with activities & membership.\"",
+		goals: "\"Elementary Teacher.\""
 	},
 	{
 		name: "Courtney", 
 		title: "Vice President - Social Media",
 		image: "",
-		responsibilities: "",
-		goals: ""
+		responsibilities: "\"I help plan, recruit, answer question, and being a friend to others.\"",
+		goals: "\"A successful event planning business on the side while I pursue a full career in the medical field.\""
 	},
 ];
 
@@ -463,4 +463,5 @@ window.addEventListener('keydown', (e) => {
 	}
 
 });
+
 
