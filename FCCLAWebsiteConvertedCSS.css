@@ -359,7 +359,10 @@ header, .basic-sidebar nav {
 .about-bullet-list {
 	display: flex;
 	justify-content: center;
-	padding: 20px;
+}
+
+.about-bullet-list ul {
+	padding: 0 15px;
 }
 
 .about-bullet-list li {
@@ -1044,6 +1047,7 @@ header, .basic-sidebar nav {
 	}
 }
  
+
 
 
 
