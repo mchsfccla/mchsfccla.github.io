@@ -359,6 +359,7 @@ header, .basic-sidebar nav {
 .about-bullet-list {
 	display: flex;
 	justify-content: center;
+	padding: 20px;
 }
 
 .about-bullet-list li {
@@ -432,7 +433,7 @@ header, .basic-sidebar nav {
 #JoinInfoList ol {
 	margin: 0 0 0 1.2rem;
 	color: #333;
-	font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+	font-size: clamp(0.95rem, 1.2vw, 1.2rem);
 	line-height: 1.6;
 }
 
@@ -1043,6 +1044,7 @@ header, .basic-sidebar nav {
 	}
 }
  
+
 
 
 
