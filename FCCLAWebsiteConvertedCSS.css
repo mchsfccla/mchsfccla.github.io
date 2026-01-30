@@ -361,10 +361,6 @@ header, .basic-sidebar nav {
 	justify-content: center;
 }
 
-.about-bullet-list ul {
-	padding: 0 15px;
-}
-
 .about-bullet-list li {
 	padding-bottom: 6px;
 	color: var(--intense-cherry);
@@ -887,7 +883,7 @@ header, .basic-sidebar nav {
 
 #TheFuture ul {
 	list-style: none;
-	padding-left: 0;
+	padding-left: 20px;
 }
 
 #TheFuture li::before {
@@ -1047,6 +1043,7 @@ header, .basic-sidebar nav {
 	}
 }
  
+
 
 
 
