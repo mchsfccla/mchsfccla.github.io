@@ -398,6 +398,11 @@ header, .basic-sidebar nav {
 	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
 }
 
+#JoinContent {
+	display: flex;
+	flex-direction: column;
+}
+
 #JoinInfoHeader {
 	flex: 0 0 240px;
 	display: flex;
@@ -1038,6 +1043,7 @@ header, .basic-sidebar nav {
 	}
 }
  
+
 
 
 
