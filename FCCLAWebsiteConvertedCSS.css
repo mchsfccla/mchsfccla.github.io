@@ -383,6 +383,79 @@ header, .basic-sidebar nav {
 	padding: 0 !important
 }
 
+/* --------- Join Info Container (About Section) --------- */
+#JoinInfoContainer {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	gap: 20px;
+	width: 100%;
+	padding: 20px;
+	margin-top: 20px;
+	background: linear-gradient(180deg, rgba(var(--fccla-red-rgb), 0.03), rgba(255,255,255,0.6));
+	border: 3px solid rgba(var(--fccla-red-rgb), 0.12);
+	border-radius: 12px;
+	box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+#JoinInfoHeader {
+	flex: 0 0 240px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+#JoinInfoHeader h3 {
+	color: var(--fccla-red);
+	font-size: clamp(1rem, 2vw, 1.5rem);
+	text-transform: uppercase;
+	margin: 0;
+	padding: 6px 12px;
+	background: white;
+	border-bottom: 6px double var(--intense-cherry);
+	border-radius: 6px;
+}
+
+#JoinInfoList {
+	flex: 1 1 auto;
+	padding: 12px 18px;
+	background: rgba(255,255,255,0.85);
+	border-radius: 8px;
+	border: 2px solid rgba(var(--intense-cherry-rgb), 0.06);
+}
+
+#JoinInfoList ol {
+	margin: 0 0 0 1.2rem;
+	color: #333;
+	font-size: clamp(0.95rem, 1.2vw, 1.05rem);
+	line-height: 1.6;
+}
+
+#JoinInfoList li {
+	margin: 8px 0;
+	padding: 8px 10px;
+	background: linear-gradient(90deg, rgba(255,255,255,0.6), rgba(250,250,250,0.4));
+	border-left: 6px solid var(--fccla-red);
+	border-radius: 6px;
+}
+
+@media (max-width: 768px) {
+	#JoinInfoContainer {
+		flex-direction: column;
+		padding: 16px;
+	}
+	#JoinInfoHeader {
+		justify-content: flex-start;
+		margin-bottom: 10px;
+	}
+	#JoinInfoHeader h3 {
+		width: 100%;
+	}
+	#JoinInfoList {
+		width: 100%;
+	}
+}
+
 /* --------- Calendar Classes ----------*/
 
 .calendar-header {
@@ -965,6 +1038,7 @@ header, .basic-sidebar nav {
 	}
 }
  
+
 
 
 
