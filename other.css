@@ -44,3 +44,31 @@ body{
     .project-id-content{margin:1rem auto;padding:1rem}
     .project-id-content p{font-size:0.95rem}
 }
+
+/* Works Cited Page Styles */
+.works-cited-container{max-width:1000px;margin:2.25rem auto;padding:0 1rem;}
+
+.works-cited-header{text-align:center;margin-bottom:2rem;}
+.works-cited-title{margin:0;font-size:2rem;color:var(--accent);}
+.works-cited-subtitle{margin:0.75rem 0 0;font-size:1.2rem;color:var(--muted);font-weight:500}
+
+.three-columns-layout{display:flex;gap:2rem;flex-wrap:wrap;justify-content:space-between}
+.column-item{flex:1;min-width:280px;background:var(--card);padding:1.5rem;border-radius:10px;box-shadow:0 6px 18px rgba(16,24,40,0.06)}
+
+.column-title{margin:0 0 1rem 0;font-size:1rem;color:var(--accent);font-weight:600;border-bottom:2px solid var(--accent);padding-bottom:0.5rem}
+.column-item ul{margin:0;padding-left:1.5rem;list-style-type:disc}
+.column-item li{margin:0.5rem 0;color:#1f2937;line-height:1.5}
+
+@media (max-width:1024px){
+	.three-columns-layout{flex-direction:column;gap:1.5rem}
+	.column-item{min-width:100%}
+}
+
+@media (max-width:640px){
+	.works-cited-container{margin:1rem auto;padding:0 0.8rem}
+	.works-cited-title{font-size:1.5rem}
+	.works-cited-subtitle{font-size:1rem}
+	.three-columns-layout{gap:1rem}
+	.column-item{padding:1rem}
+}
+
