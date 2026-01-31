@@ -40,11 +40,21 @@
 		</nav>
 	</div>
 	
-	<main>
-		<section id="PlanningSummary">
-			<iframe id="PlanSummary" src="planning-summary.pdf"></iframe>
-		</section>
+	<main id="main-content" class="container">
+		<section id="PlanningSummary" class="content-section">
+			<div class="summary-header">
+				<h2 class="summary-title">Planning Summary</h2>
+				<p class="summary-subtitle">Review the project planning summary below. You can view it in-browser or download a copy.</p>
+				<div class="summary-actions">
+					<a class="btn primary" href="planning-summary.pdf" download>Download PDF</a>
+					<a class="btn" href="planning-summary.pdf" target="_blank" rel="noopener">Open in new tab</a>
+				</div>
+			</div>
 
+			<div class="iframe-wrapper">
+				<iframe id="PlanSummary" class="plan-iframe" src="planning-summary.pdf" title="Planning Summary PDF"></iframe>
+			</div>
+		</section>
 	</main>
 	
 	<footer>
@@ -80,6 +90,7 @@
 </body>
 
 </html>
+
 
 
 
