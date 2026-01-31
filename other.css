@@ -1,0 +1,43 @@
+/* Planning Summary page styles */
+:root{
+	--accent:#2b3a67;
+	--muted:#6b7280;
+	--bg:#f6f8fb;
+	--card:#ffffff;
+}
+
+html,body{height:100%;}
+body{
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial;
+	background:var(--bg);
+	color:#1f2937;
+	margin:0;
+}
+
+.container{max-width:980px;margin:2.25rem auto;padding:0 1rem;}
+.content-section{background:var(--card);border-radius:10px;box-shadow:0 6px 18px rgba(16,24,40,0.06);overflow:hidden}
+
+.summary-header{padding:1.25rem 1.5rem;border-bottom:1px solid rgba(15,23,42,0.04);}
+.summary-title{margin:0;font-size:1.4rem;color:var(--accent);}
+.summary-subtitle{margin:0.35rem 0 0;color:var(--muted);font-size:0.95rem}
+.summary-actions{margin-top:0.75rem;display:flex;gap:0.5rem;flex-wrap:wrap}
+
+.btn{display:inline-block;padding:0.45rem 0.8rem;border-radius:8px;text-decoration:none;font-weight:600;color:var(--accent);border:1px solid transparent;background:transparent}
+.btn.primary{background:var(--accent);color:#fff;border-color:rgba(0,0,0,0.06)}
+
+.iframe-wrapper{padding:1rem}
+.plan-iframe{width:100%;height:72vh;border:1px solid rgba(15,23,42,0.06);border-radius:8px}
+
+/* Small screens */
+@media (max-width:640px){
+	.container{margin:1rem auto;padding:0 0.8rem}
+	.plan-iframe{height:56vh}
+	.summary-title{font-size:1.2rem}
+	.summary-actions{flex-direction:column;align-items:stretch}
+	.btn{width:100%;text-align:center}
+}
+
+/* Accessibility helpers */
+.btn:focus{outline:3px solid rgba(43,58,103,0.15);outline-offset:2px}
+
+.summary-subtitle a{color:var(--accent);text-decoration:underline}
