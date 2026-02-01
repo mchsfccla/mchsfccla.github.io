@@ -111,6 +111,44 @@ main, .nav-link-container {
 	padding: 8px;
 }
 
+.glowing-nav {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 30px;
+}
+
+.glowing-nav li {
+	position: relative;
+	list-style: none;
+}
+
+.glowing-nav li a {
+	font-size: 4em;
+	text-decoration: none;
+	letter-spacing: 2px;
+	line-height: 1em;
+	text-transorm: uppercase;
+	color: transparent;
+	-webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
+}
+
+.glowing-nav li a::before {
+	content: attr(data-text);
+	position: absolute;
+	color: var(--white);
+	width: 0;
+	overflow: hidden;
+	transition: 1s;
+	border-weight: 8px solid var(--white);
+	-webkit-text-stroke: 1px var(--white);
+}
+
+.glowing-nav li a:hover::before {
+	width: 100%;
+	filter: drop-shadow(0 0 25px var(--white));
+}
+
 /* --------- Mix-In Utility Chunks ------------ */
 /* ATTIBUTES FOR THE MAJOR HTML TAGS*/
 /************************************/
@@ -1073,6 +1111,7 @@ header, .basic-sidebar nav {
 	}
 }
  
+
 
 
 
