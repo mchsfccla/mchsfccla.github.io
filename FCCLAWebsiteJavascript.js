@@ -213,28 +213,28 @@ const leadershipData = [
 	{
 		name: "Josie",
 		title: "President",
-		image: "president.jpeg",
+		image: "president_v2.jpeg",
 		responsibilities: "\"I help to lead discussions & meetings. I offer a creative mindset & feed back during our discussions.\"",
 		goals: "\"My dream is to start my own special occasion and formal wear brand. I plan to intern with a fashion couture atelier (preferrably in Paris or NYC!)\""
 	},
 	{
 		name: "Talan", 
 		title: "Vice President - Membership", 
-		image: "vp-membership1.jpeg",
+		image: "vp-membership1_v2.jpeg",
 		responsibilities: "\"My responsibility is to recruit other students into the club, helping more sudents feel welcomed, accomplished and whole.\"",
 		goals: "\"Go to Bridgerland Technical College and get a certificate in Graphic Design and possibly get a degree. I'm set on Graphic Design as a career.\""
 	},
 	{
 		name: "Emma",
 		title: "Vice President - Membership",
-		image: "vp-membership2.jpeg",
+		image: "vp-membership2_v2.jpeg",
 		responsibilities: "\"To be a mentor to younger members and look after them. As a leader, you do have more responsibilities and work, but personally, I think it's worth it.\"",
 		goals: "\"My career goals are career goals are to become an interior or set designer. I love all things design- & architexture-wise!\""
 	},
 	{
 		name: "Aunara",
 		title: "Vice President - Fundraising",
-		image: "vp-fundraising.jpeg",
+		image: "vp-fundraising_v2.jpeg",
 		responsibilities: "",
 		goals: ""
 	},
@@ -248,7 +248,7 @@ const leadershipData = [
 	{
 		name: "Tana", 
 		title: "Vice President - Service", 
-		image: "vp-service.jpeg",
+		image: "vp-service_v2.jpeg",
 		responsibilities: "\"Assist with activities & membership.\"",
 		goals: "\"Elementary Teacher.\""
 	},
@@ -463,6 +463,7 @@ window.addEventListener('keydown', (e) => {
 	}
 
 });
+
 
 
 
