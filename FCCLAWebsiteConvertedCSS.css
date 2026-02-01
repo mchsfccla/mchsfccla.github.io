@@ -854,9 +854,16 @@ header, .basic-sidebar nav {
 }
 
 #AboutFCCLAHeader {
-	color: var(--intense-cherry);
+	color: var(--fccla-red);
 	font-size: 2rem;
 	font-weight: 700;
+	text-transform: uppercase;
+}
+
+.what-is-fccla-title {
+	color: var(--intense-cherry);
+	font-size: 1.4;
+	font-weight: 400;
 	text-transform: uppercase;
 }
 
@@ -1057,6 +1064,7 @@ header, .basic-sidebar nav {
 	}
 }
  
+
 
 
 
