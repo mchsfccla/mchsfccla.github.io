@@ -862,7 +862,7 @@ header, .basic-sidebar nav {
 
 .what-is-fccla-title {
 	color: var(--intense-cherry);
-	font-size: 1.4;
+	font-size: 1.6rem;
 	font-weight: 400;
 	text-transform: uppercase;
 }
@@ -1064,6 +1064,7 @@ header, .basic-sidebar nav {
 	}
 }
  
+
 
 
 
