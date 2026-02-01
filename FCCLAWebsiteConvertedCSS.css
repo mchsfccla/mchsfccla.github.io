@@ -102,6 +102,10 @@ main, .nav-link-container {
 .no-transition .image-carousel-slide {
 	/*transition: none !important;*/
 }
+
+.bold {
+	font-weight: 700 !important;
+}
 /* --------- Mix-In Utility Chunks ------------ */
 /* ATTIBUTES FOR THE MAJOR HTML TAGS*/
 /************************************/
@@ -1064,6 +1068,7 @@ header, .basic-sidebar nav {
 	}
 }
  
+
 
 
 
