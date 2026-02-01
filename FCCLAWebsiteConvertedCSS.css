@@ -7,10 +7,7 @@
 	 --fccla-red-rgb: 228, 0, 43;
 	 --intense-cherry: #bd2c43;
 	 --intense-cherry-rgb: 189, 44, 67;
-	/* Placeholder value*/
-	 --mchs-orange: orange;
-	/* Placeholder value*/
-	 --mchs-navy: navy;
+	 --blue-accent: #2b3a67;
 	/* Contrast basic background from traditional white */
 	 --background: #f4f4f4;
 	 --transition: all 0.3s ease;
@@ -821,9 +818,10 @@ header, .basic-sidebar nav {
 
 #ImageCarouselHeaderContainer h1 {
 	padding: 5px 3px;
-	border: 5px double black;
+	border: 5px double var(--blue-accent);
 	border-radius: 3px;
 	justify-content: center;
+	color: var(--blue-accent);
 }
 
 #nextBtn, #prevBtn {
@@ -1044,6 +1042,7 @@ header, .basic-sidebar nav {
 	}
 }
  
+
 
 
 
