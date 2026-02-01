@@ -72,3 +72,6 @@ body{
 	.column-item{padding:1rem}
 }
 
+.id-page-title {margin:0 0 1rem 0;font-size:1rem;color:var(--accent) !important;font-weight:600;border-bottom:2px solid var(--accent);padding-bottom:0.5rem}
+
+
