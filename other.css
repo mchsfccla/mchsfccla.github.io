@@ -1,6 +1,7 @@
 /* Planning Summary page styles */
 :root{
 	--accent:#2b3a67;
+	--accent-rgb: 43, 58, 103;
 	--muted:#6b7280;
 	--bg:#f6f8fb;
 	--card:#ffffff;
@@ -72,8 +73,8 @@ body{
 	.column-item{padding:1rem}
 }
 
-.id-page-title {margin:0 0 1rem 0;font-size:2rem;color:var(--accent) !important;font-weight:600;border-bottom:2px solid var(--accent);padding-bottom:0.5rem}
+.id-page-title {margin:0 0 1rem 0;font-size:2rem;color: var(--accent) !important;font-weight:600;border-bottom:2px solid var(--accent);padding-bottom:0.5rem}
 .id-page-chapter {margin:0.75rem 0 0;font-size:1.618rem;color:var(--muted);font-weight:500}
-.id-page-accent {color: var(--accent) !important}
+.id-page-accent {color: rgba(var(--accent-rgb), 0.8) !important}
 .id-page-location {margin: 0.75rem 0 0;font-size:1.3rem;font-weight:300}
 
