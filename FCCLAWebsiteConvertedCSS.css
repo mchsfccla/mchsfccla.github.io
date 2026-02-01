@@ -124,7 +124,7 @@ main, .nav-link-container {
 }
 
 .glowing-nav li a {
-	font-size: 4em;
+	font-size: 2em;
 	text-decoration: none;
 	letter-spacing: 2px;
 	line-height: 1em;
@@ -1111,6 +1111,7 @@ header, .basic-sidebar nav {
 	}
 }
  
+
 
 
 
