@@ -1024,6 +1024,13 @@ header, .basic-sidebar nav {
 	background: var(--fccla-red);
 }
 
+@media screen and (max-width: 600px) {
+	#RedBlock {
+		width: 100vw;
+		height: 20px;
+	}
+}
+
 
 /* SUPPORT CHECKS AND OVERRIDE OF PREVIOUS VALUES*/
 /*************************************************/
@@ -1042,6 +1049,7 @@ header, .basic-sidebar nav {
 	}
 }
  
+
 
 
 
