@@ -818,10 +818,10 @@ header, .basic-sidebar nav {
 
 #ImageCarouselHeaderContainer h1 {
 	padding: 5px 3px;
-	border: 5px double var(--blue-accent);
+	border: 5px double var(--fccla-red);
 	border-radius: 3px;
 	justify-content: center;
-	color: var(--blue-accent);
+	color: var(--fccla-red);
 }
 
 #nextBtn, #prevBtn {
@@ -1042,6 +1042,7 @@ header, .basic-sidebar nav {
 	}
 }
  
+
 
 
 
