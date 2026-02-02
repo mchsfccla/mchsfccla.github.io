@@ -327,14 +327,6 @@ footer {
 	/* Hidden position calculation*/
 	clip-path: inset(0 calc(var(--sidebar-width) - var(--nav-visible-edge)) 0 0);
 	transition: clip-path 0.3s ease;
-
-	.double-hidden {
-		display: flex;
-	}
-
-	.double-hover {
-		display: hidden;
-	}
 }
 
 .double-chevron {
@@ -342,6 +334,14 @@ footer {
 	top: 50%;
 	right: 0;
 	transform: translateY(-50%);
+	pointer-events: none;
+}
+
+.double-hidden {
+	display: flex;
+}
+.double-hover {
+	display: none;
 }
 
 .basic-sidebar nav {
@@ -351,6 +351,7 @@ footer {
 	 
 	 transform: translateX(calc((var(--sidebar-width) - var(--nav-visible-edge)) * -1));
 	 transition: var(--transition), box-shadow 0.3s ease;
+	 position: relative;
 }
 
 .basic-sidebar:hover,
@@ -362,14 +363,14 @@ footer {
 .basic-sidebar:focus-within nav {
 	transform: translateX(0);
 	box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2);
+}
 
-	.double-hidden {
-		display: flex;
-	}
+.basic-sidebar:hover .double-hidden {
+	display: none;
+}
 
-	.double-hover {
-		display: hidden;
-	}
+.basic-sidebar:hover .double-hover {
+	display: flex;
 }
 
 .nav-link-container {
@@ -1134,6 +1135,7 @@ header, .basic-sidebar nav {
 	}
 }
  
+
 
 
 
