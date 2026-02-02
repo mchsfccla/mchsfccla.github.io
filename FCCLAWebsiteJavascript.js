@@ -241,7 +241,7 @@ const leadershipData = [
 	{
 		name: "Emily",
 		title: "Vice President - Star Events",
-		image: "vp-start-event.jpeg",
+		image: "vp-star-event.jpeg",
 		responsibilities: "\"Leadership member over events.\"",
 		goals: "\"Elementary Teacher.\""
 	},
@@ -463,6 +463,7 @@ window.addEventListener('keydown', (e) => {
 	}
 
 });
+
 
 
 
