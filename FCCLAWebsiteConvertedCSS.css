@@ -124,10 +124,10 @@ main, .nav-link-container {
 }
 
 .glowing-nav li a {
-	font-size: 2em;
+	font-size: 1.4em;
 	text-decoration: none;
-	letter-spacing: 2px;
-	line-height: 1em;
+	letter-spacing: 0.5px;
+	line-height: 0.7em;
 	text-transorm: uppercase;
 	color: transparent;
 	-webkit-text-stroke: 1px rgba(255, 255, 255, 0.5);
@@ -1111,6 +1111,7 @@ header, .basic-sidebar nav {
 	}
 }
  
+
 
 
 
