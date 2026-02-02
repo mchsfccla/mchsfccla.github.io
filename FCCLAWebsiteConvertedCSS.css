@@ -335,6 +335,8 @@ footer {
 	right: 0;
 	transform: translateY(-50%);
 	pointer-events: none;
+	color: white;
+	font-size: 2rem;
 }
 
 .double-hidden {
@@ -1135,6 +1137,7 @@ header, .basic-sidebar nav {
 	}
 }
  
+
 
 
 
