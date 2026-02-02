@@ -331,7 +331,7 @@ footer {
 
 .double-chevron {
 	position: absolute;
-	top: 50%;
+	top: 30%;
 	right: 0;
 	transform: translateY(-50%);
 	pointer-events: none;
@@ -1137,6 +1137,7 @@ header, .basic-sidebar nav {
 	}
 }
  
+
 
 
 
