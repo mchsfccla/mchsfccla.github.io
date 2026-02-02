@@ -990,6 +990,7 @@ header, .basic-sidebar nav {
 	justify-content: center;
 	align-items: center;
 	border-radius: 15px;
+	border: 5px solid var(--fccla-red);
 	padding-left: clamp(10px, 5vw, 50px);
 	overflow: hidden;
 }
@@ -1137,6 +1138,7 @@ header, .basic-sidebar nav {
 	}
 }
  
+
 
 
 
