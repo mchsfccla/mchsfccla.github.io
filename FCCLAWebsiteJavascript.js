@@ -235,13 +235,13 @@ const leadershipData = [
 		name: "Aunara",
 		title: "Vice President - Fundraising",
 		image: "vp-fundraising_v2.jpeg",
-		responsibilities: "",
-		goals: ""
+		responsibilities: "\"I help lead meeting, plan activity, go to meetings, and help with fundraising\"",
+		goals: "\"My career goals are to ecome a elementry or preschool teacher. I want to get myeducation in: Special Ed, Early Ed, or teaching.\""
 	},
 	{
 		name: "Emily",
 		title: "Vice President - Star Events",
-		image: "placeholder-image.svg",
+		image: "vp-start-event.jpeg",
 		responsibilities: "\"Leadership member over events.\"",
 		goals: "\"Elementary Teacher.\""
 	},
@@ -463,6 +463,7 @@ window.addEventListener('keydown', (e) => {
 	}
 
 });
+
 
 
 
