@@ -327,6 +327,21 @@ footer {
 	/* Hidden position calculation*/
 	clip-path: inset(0 calc(var(--sidebar-width) - var(--nav-visible-edge)) 0 0);
 	transition: clip-path 0.3s ease;
+
+	.double-hidden {
+		display: flex;
+	}
+
+	.double-hover {
+		display: hidden;
+	}
+}
+
+.double-chevron {
+	position: absolute;
+	top: 50%;
+	right: 0;
+	transform: translateY(-50%);
 }
 
 .basic-sidebar nav {
@@ -347,6 +362,14 @@ footer {
 .basic-sidebar:focus-within nav {
 	transform: translateX(0);
 	box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2);
+
+	.double-hidden {
+		display: flex;
+	}
+
+	.double-hover {
+		display: hidden;
+	}
 }
 
 .nav-link-container {
@@ -1111,6 +1134,7 @@ header, .basic-sidebar nav {
 	}
 }
  
+
 
 
 
