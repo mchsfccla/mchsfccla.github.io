@@ -337,8 +337,14 @@ const activitiesData = [
     { 
 		title: "Combined Mock Competition",
 		date: "January 27th",
-		content: "Came together with two other schools in our valley, Logan High School and Fast Forward, for a mock competition. Here the students got feedbakc from peers, teachers, and judges from other schools to help prepare for FCCLA Regionals.",
-		cost: "$45 (drinks and refreshments)"
+		content: "Came together with two other schools in our valley, Logan High School and Fast Forward, for a mock competition. Here the students got feedback from peers, teachers, and judges from other schools to help prepare for FCCLA Regionals.",
+		cost: "$45 (drinks and rewards)"
+	},
+	{ 
+		title: "FCS Mini Camp",
+		date: "Febuary 2nd",
+		content: "Children and parents from the Hyrum Community come together to participate in fun activities that help educate them and excite them about FCCLA and the FCS Career Paths.",
+		cost: "$30 (drinks and refreshments)"
 	},
 ];
 
@@ -484,6 +490,7 @@ window.addEventListener('keydown', (e) => {
 	}
 
 });
+
 
 
 
