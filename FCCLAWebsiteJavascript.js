@@ -43,7 +43,7 @@ const imageCarouselData =  [
 	{title: "", description: "", image: "IMG_2483.jpeg"},
 	{title: "", description: "", image: "IMG_8455.jpeg"},
 	{title: "", description: "", image: "IMG_8489.jpeg"},
-	{title: "", description: "", image: "IMG_2950.jpeg"}
+	{title: "", description: "", image: "IMG_2946.jpeg"}
 ];
 
 // Sets Image Carousel image index
@@ -465,6 +465,7 @@ window.addEventListener('keydown', (e) => {
 	}
 
 });
+
 
 
 
