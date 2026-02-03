@@ -450,7 +450,7 @@ function generateNodes(data, containerId) {
 		content.className = 'node-content';
 		content.innerHTML = `
 			<h2>${item.title}</h2>
-			<h4>${item.date}</h5>
+			<p>${item.date}</p>
 			<p>${item.content}</p>
 			<p>Cost: ${item.cost}</p>
 			<button class="close-node-btn">Close</button>
@@ -491,6 +491,7 @@ window.addEventListener('keydown', (e) => {
 	}
 
 });
+
 
 
 
