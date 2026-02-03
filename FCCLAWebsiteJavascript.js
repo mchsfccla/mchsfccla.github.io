@@ -346,6 +346,12 @@ const activitiesData = [
 		content: "Children and parents from the Hyrum Community come together to participate in fun activities that help educate them and excite them about FCCLA and the FCS Career Paths.",
 		cost: "$30 (drinks and refreshments)"
 	},
+	{ 
+		title: "Combined Activity at Logan",
+		date: "November 11th",
+		content: "FCCLA combined activity at Logan High School, with Green Canyon, Fast Forward, get to know you games.",
+		cost: "$32 (donuts)"
+	},
 ];
 
 const fcclaRedShades = [
@@ -491,6 +497,7 @@ window.addEventListener('keydown', (e) => {
 	}
 
 });
+
 
 
 
