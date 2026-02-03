@@ -38,10 +38,12 @@ sectionObserver.observe(document.getElementById("ImageCarouselContainer"));
 // <<<<<<<<<< IMAGE CAROUSEL JAVASCRIPT >>>>>>>>>>
 const imageCarouselData =  [
 	{title: "", description: "", image: "IMG_2151.jpeg"},
+	{title: "", description: "", image: "IMG_2955.jpeg"},
 	{title: "", description: "", image: "IMG_2153.jpeg"},
 	{title: "", description: "", image: "IMG_2483.jpeg"},
 	{title: "", description: "", image: "IMG_8455.jpeg"},
-	{title: "", description: "", image: "IMG_8489.jpeg"}
+	{title: "", description: "", image: "IMG_8489.jpeg"},
+	{title: "", description: "", image: "IMG_2950.jpeg"}
 ];
 
 // Sets Image Carousel image index
@@ -463,6 +465,7 @@ window.addEventListener('keydown', (e) => {
 	}
 
 });
+
 
 
 
