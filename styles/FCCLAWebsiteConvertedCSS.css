@@ -842,8 +842,8 @@ header, .basic-sidebar nav {
 	height: clamp(50px, calc(20 * var(--height-unit)), 100px);
 	margin: 20px 0;
 	/* Mask Properties */
-	-webkit-mask-image: url('assets/logos/FCCLATaglineLogo_red.png');
-	mask-image: url('assets/logos/FCCLATaglineLogo_red.png');
+	-webkit-mask-image: url('../assets/logos/FCCLATaglineLogo_red.png');
+	mask-image: url('../assets/logos/FCCLATaglineLogo_red.png');
 	-webkit-mask-size: contain;
 	mask-size: contain;
 	-webkit-mask-repeat: no-repeat;
@@ -954,18 +954,18 @@ header, .basic-sidebar nav {
 }
 
 #Mission .icon {
-	-webkit-mask-image: url('assets/icons/rocket-ship.svg');
-	mask-image: url('assets/icons/rocket-ship.svg');
+	-webkit-mask-image: url('../assets/icons/rocket-ship.svg');
+	mask-image: url('../assets/icons/rocket-ship.svg');
 }
 
 #Focus .icon {
-	-webkit-mask-image: url('assets/icons/target.svg');
-	mask-image: url('assets/icons/target.svg');
+	-webkit-mask-image: url('../assets/icons/target.svg');
+	mask-image: url('../assets/icons/target.svg');
 }
 
 #TheFuture .icon {
-	-webkit-mask-image: url('assets/icons/hour-glass.svg');
-	mask-image: url('assets/icons/hour-glass.svg');
+	-webkit-mask-image: url('../assets/icons/hour-glass.svg');
+	mask-image: url('../assets/icons/hour-glass.svg');
 }
 
 #TheFuture ul {
@@ -1071,8 +1071,8 @@ header, .basic-sidebar nav {
 	height: 80px;
 	
 	/* Mask Properties */
-    -webkit-mask-image: url('assets/logos/FCCLAEmblemRed.png');
-    mask-image: url('assets/logos/FCCLAEmblemRed.png');
+    -webkit-mask-image: url('../assets/logos/FCCLAEmblemRed.png');
+    mask-image: url('../assets/logos/FCCLAEmblemRed.png');
     -webkit-mask-size: contain;
     mask-size: contain;
     -webkit-mask-repeat: no-repeat;
@@ -1138,6 +1138,7 @@ header, .basic-sidebar nav {
 	}
 }
  
+
 
 
 
