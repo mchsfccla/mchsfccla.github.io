@@ -257,7 +257,7 @@ const leadershipData = [
 	{
 		name: "Courtney", 
 		title: "Vice President - Social Media",
-		image: "placeholder-image.svg",
+		image: "vp-social-media.jpeg",
 		responsibilities: "\"I help plan, recruit people to FCCLA, answering questions, and being a friend to others.\"",
 		goals: "\"I one day will have a successful event planning business on the side while I pursue a full career in the medical field.\""
 	},
@@ -310,18 +310,36 @@ function scrollRecognition(direction) {
 
 // <<<<<<<<<< CIRCULAR MORPHING GRID JAVASCRIPT >>>>>>>>>>
 const activitiesData = [
-    { title: "Fall Leadership", content: "Kick off the year with our annual leadership rally and workshop series." },
-    { title: "STAR Events", content: "Competitive events where members are recognized for proficiency and achievement in chapter and individual projects." },
-    { title: "Community Service", content: "Join us for our monthly outreach programs at the local food bank and senior center." },
-    { title: "Career Pathways", content: "Explore various career opportunities in Family and Consumer Sciences through guest speaker events." },
-    { title: "State Convention", content: "Represent our chapter at the state level and network with members from across the region." },
-    { title: "Member Recruitment", content: "Help us grow our family by participating in our 'Bring a Friend' social nights." },
-    { title: "National Programs", content: "Dive into peer education programs like Power of One and Financial Fitness." },
-    { title: "Scholarship Prep", content: "Workshops dedicated to helping seniors find and apply for FCS-related scholarships." },
-    { title: "Chapter Meetings", content: "Stay informed and vote on important chapter decisions during our bi-weekly meetings." },
-    { title: "Fundraising Gala", content: "Our biggest event of the year to support our competition travel funds." },
-    { title: "Officer Training", content: "Specialized sessions for newly elected officers to develop their leadership skills." },
-    { title: "Public Relations", content: "Learn how to manage our social media presence and promote FCCLA to the community." }
+    { 
+		title: "Opening Social", 
+		date:"September 4th", 
+		content: "Kicked off the year with our annual open social. Invited as many people to attend as possible. Used this oppurtiunity to encourage people to participate in FCCLA through community service, STAR Events, and activities throughout the year.",
+		cost: "$10 (refreshments)"
+	},
+    { 
+		title: "Homecoming Parade",
+		date: "September 17th",
+		content: "Utilized a truck with the FCCLA Logos draped on the side to spread awareness and encouragement to students in the crowd to join FCCLA.",
+		cost: "$45 (candy to throw)"
+	},
+    { 
+		title: "Merry Mustang Food Drive Competition", 
+		date: "November 3-13th",
+		content: "Collected non-perishable food for struggling students through a competition between the CTSO clubs.",
+		cost: "$0"
+	},
+    { 
+		title: "Pumpkin Walk", 
+		date: "October 15-22nd",
+		content: "Painted pumpkins with designs that pormote and advertise FCCLA to the public. This project was designed to inform the public more about what FCCLA is and what you can do by joining. The project even got into the districts newsletter the following week!",
+		cost: "$20 (paint supplies)"
+	},
+    { 
+		title: "Combined Mock Competition",
+		date: "January 27th",
+		content: "Came together with two other schools in our valley, Logan High School and Fast Forward, for a mock competition. Here the students got feedbakc from peers, teachers, and judges from other schools to help prepare for FCCLA Regionals.",
+		cost: "$45 (drinks and refreshments)"
+	},
 ];
 
 const fcclaRedShades = [
@@ -427,6 +445,7 @@ function generateNodes(data, containerId) {
 		content.innerHTML = `
 			<h2>${item.title}</h2>
 			<p>${item.content}</p>
+			<p>Cost: ${item.cost}</p>
 			<button class="close-node-btn">Close</button>
 		`;
 		
@@ -465,6 +484,7 @@ window.addEventListener('keydown', (e) => {
 	}
 
 });
+
 
 
 
